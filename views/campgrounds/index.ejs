@@ -1,0 +1,31 @@
+ <% include ../partials/header%>
+<link rel="stylesheet" href="/stylesheets/index.css">
+<div class="container" >
+<header class="jumbotron">
+<h1>Welcome to the Marvel Universe!</h1>
+<p>Enjoy the marvel comics characters collection</p>
+<a class="btn btn-danger btn-lg" href="/campgrounds/new">ADD A NEW CHARACTER!</a>
+</header>
+<div class="row" style="display:flex; flex-wrap:wrap">
+<%campgrounds.forEach(function(campground){%>
+    <div class=" col-md-3 col-sm-6">
+       <div class="thumbnail ">
+   <img src="<%=campground.image%>">
+<div class="caption">
+   <h4><%=campground.name%></h4>
+    </div>
+       <p>
+           <a href="/campgrounds/<%=campground._id%>" class="btn btn-info">show more info</a>
+           </p>
+  
+ </div>
+ </div>
+   
+<%})%>
+</div>
+</div>
+ <audio src="../partials/music/song.mp3" controls>
+  <embed name="GoodEnough" src="../partials/music/song.mp3" loop="false" hidden="true" autostart="true">
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+<% include ../partials/footer%>

@@ -1,0 +1,16 @@
+.jumbotron{
+    background-color:white;
+    color:black;
+}
+
+.caption{
+    background-color:white;
+}
+
+.btn{
+    margin-left:4px;
+}
+
+.btn-danger{
+    background-color:red;
+}
